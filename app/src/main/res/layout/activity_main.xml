@@ -7,24 +7,76 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/et_num_uno"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="96dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="Número uno"
         android:inputType="number"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/et_num_dos"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         android:layout_marginTop="24dp"
         android:ems="10"
+        android:hint="Número dos"
         android:inputType="text"
-        android:text="Name"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        tools:layout_editor_absoluteX="102dp" />
+        app:layout_constraintEnd_toEndOf="@+id/et_num_uno"
+        app:layout_constraintStart_toStartOf="@+id/et_num_uno"
+        app:layout_constraintTop_toBottomOf="@+id/et_num_uno" />
+
+    <Button
+        android:id="@+id/btn_suma"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:text="Suma"
+        app:layout_constraintEnd_toEndOf="@+id/et_num_dos"
+        app:layout_constraintStart_toStartOf="@+id/et_num_dos"
+        app:layout_constraintTop_toBottomOf="@+id/et_num_dos" />
+
+    <Button
+        android:id="@+id/btn_resta"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Resta"
+        app:layout_constraintEnd_toEndOf="@+id/btn_suma"
+        app:layout_constraintStart_toStartOf="@+id/btn_suma"
+        app:layout_constraintTop_toBottomOf="@+id/btn_suma" />
+
+    <Button
+        android:id="@+id/btn_divide"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Dividir"
+        app:layout_constraintEnd_toEndOf="@+id/btn_resta"
+        app:layout_constraintStart_toStartOf="@+id/btn_resta"
+        app:layout_constraintTop_toBottomOf="@+id/btn_resta" />
+
+    <Button
+        android:id="@+id/btn_multiplica"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Multiplicar"
+        app:layout_constraintEnd_toEndOf="@+id/btn_divide"
+        app:layout_constraintStart_toStartOf="@+id/btn_divide"
+        app:layout_constraintTop_toBottomOf="@+id/btn_divide" />
 </androidx.constraintlayout.widget.ConstraintLayout>
