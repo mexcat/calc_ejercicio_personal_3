@@ -10,15 +10,12 @@
         android:id="@+id/et_num_uno"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Número uno"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
@@ -35,23 +32,21 @@
 
     <Button
         android:id="@+id/btn_suma"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text="Suma"
-        app:layout_constraintEnd_toEndOf="@+id/et_num_dos"
-        app:layout_constraintStart_toStartOf="@+id/et_num_dos"
-        app:layout_constraintTop_toBottomOf="@+id/et_num_dos" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <Button
         android:id="@+id/btn_resta"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
         android:text="Resta"
         app:layout_constraintEnd_toEndOf="@+id/btn_suma"
         app:layout_constraintStart_toStartOf="@+id/btn_suma"
@@ -59,11 +54,9 @@
 
     <Button
         android:id="@+id/btn_divide"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
         android:text="Dividir"
         app:layout_constraintEnd_toEndOf="@+id/btn_resta"
         app:layout_constraintStart_toStartOf="@+id/btn_resta"
@@ -71,11 +64,9 @@
 
     <Button
         android:id="@+id/btn_multiplica"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
         android:text="Multiplicar"
         app:layout_constraintEnd_toEndOf="@+id/btn_divide"
         app:layout_constraintStart_toStartOf="@+id/btn_divide"
@@ -85,9 +76,9 @@
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/et_num_uno"
-        app:layout_constraintStart_toStartOf="@+id/et_num_uno"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/outline_calculate_24" />
 
@@ -97,8 +88,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Algún texto aquí"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_multiplica"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_multiplica"
         app:layout_constraintTop_toBottomOf="@+id/btn_multiplica" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="355dp"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
